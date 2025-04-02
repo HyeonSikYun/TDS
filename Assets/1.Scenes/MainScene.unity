@@ -221,7 +221,7 @@ Transform:
   m_GameObject: {fileID: 167969169}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.34, y: -3.51, z: -0.0915173}
+  m_LocalPosition: {x: 21.37, y: -3.51, z: -0.0915173}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -536,11 +536,11 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 2, y: 2.24, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1489341059}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &639653328
 GameObject:
@@ -991,7 +991,7 @@ Transform:
   m_GameObject: {fileID: 1404335096}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.2, y: -3.11, z: -0.0915173}
+  m_LocalPosition: {x: 25.23, y: -3.11, z: -0.0915173}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1008,6 +1008,7 @@ GameObject:
   - component: {fileID: 1489341059}
   - component: {fileID: 1489341060}
   - component: {fileID: 1489341061}
+  - component: {fileID: 1489341062}
   m_Layer: 0
   m_Name: Truck
   m_TagString: Truck
@@ -1030,6 +1031,7 @@ Transform:
   m_Children:
   - {fileID: 988428232}
   - {fileID: 1783366072}
+  - {fileID: 519420032}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1489341060
@@ -1104,6 +1106,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1489341062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489341058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cabb1848ddba17840afaa44e10cff3e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.5
+  stopPositionX: 14
 --- !u!1001 &1544987788
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1375,7 +1391,7 @@ Transform:
   m_GameObject: {fileID: 2025468665}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.05, y: -3.42, z: -0.0915173}
+  m_LocalPosition: {x: 23.080002, y: -3.42, z: -0.0915173}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1480,7 +1496,7 @@ Transform:
   m_GameObject: {fileID: 2110209993}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.07, y: -2.95, z: -0.0915173}
+  m_LocalPosition: {x: 22.1, y: -2.95, z: -0.0915173}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2110,7 +2126,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1756097052}
-  - {fileID: 519420032}
   - {fileID: 679450420}
   - {fileID: 1489341059}
   - {fileID: 1524754161756929040}
