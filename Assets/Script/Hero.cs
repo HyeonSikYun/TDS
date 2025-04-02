@@ -16,7 +16,7 @@ public class Hero : MonoBehaviour
     public Transform gunTransform;     // 총 오브젝트 트랜스폼
 
     [Header("샷건 설정")]
-    public int bulletsPerShot = 5;     // 한 번에 발사할 총알 수 (5발)
+    public int bulletsPerShot = 5;     // 한 번에 발사할 총알 수
     public float spreadAngle = 10f;    // 탄퍼짐 각도
     public float minSpeedMultiplier = 0.9f; // 최소 속도 배율
     public float maxSpeedMultiplier = 1.1f; // 최대 속도 배율
@@ -34,7 +34,6 @@ public class Hero : MonoBehaviour
 
     void Start()
     {
-
         leftLine = CreateLineRenderer("LeftLine");
         rightLine = CreateLineRenderer("RightLine");
     }
@@ -63,7 +62,6 @@ public class Hero : MonoBehaviour
         if (currentTarget != null)
         {
             UpdateTrajectoryLines();
-            // 타겟이 있을 때 총 회전 업데이트
             UpdateGunRotation();
         }
         else
@@ -86,27 +84,9 @@ public class Hero : MonoBehaviour
     {
         if (currentTarget == null || gunTransform == null) return;
 
-        // 타겟 방향 계산
         Vector3 targetDirection = currentTarget.position - transform.position;
-
-        // 2D 게임에서는 Z축 회전만 필요합니다
         float angle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
-
-        // 총 오브젝트의 회전 설정
         gunTransform.rotation = Quaternion.Euler(0, 0, angle);
-
-        // 필요한 경우 좌우 반전 처리
-        // 현재 타겟이 캐릭터의 왼쪽에 있으면 총을 뒤집기
-        if (targetDirection.x < 0)
-        {
-            // 총의 스케일을 y축으로 뒤집어 왼쪽을 향하게 함
-            gunTransform.localScale = new Vector3(1, -1, 1);
-        }
-        else
-        {
-            // 총의 스케일을 원래대로 복구
-            gunTransform.localScale = new Vector3(1, 1, 1);
-        }
     }
 
     void FindClosestEnemy()
@@ -143,7 +123,6 @@ public class Hero : MonoBehaviour
         if (currentTarget == null) return;
 
         Vector3 baseDirection = (currentTarget.position - firePoint.position).normalized;
-
         float halfFanAngle = lineFanAngle / 2;
 
         Quaternion leftRotation = Quaternion.Euler(0, 0, halfFanAngle);
@@ -166,10 +145,6 @@ public class Hero : MonoBehaviour
         if (currentTarget == null || bulletPrefab == null) return;
 
         Vector3 baseDirection = (currentTarget.position - firePoint.position).normalized;
-
-        // 발사할 때도 총 회전 업데이트
-        UpdateGunRotation();
-
         float angleStep = spreadAngle / (bulletsPerShot - 1);
         float startAngle = -spreadAngle / 2;
 

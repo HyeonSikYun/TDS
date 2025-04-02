@@ -148,8 +148,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeSpeed: 0.5
-  upSpeed: 1
+  moveSpeed: 2
   lifetime: 1
+  arcHeight: 2
   textComponent: {fileID: 0}
 --- !u!1 &7104391806530737521
 GameObject:
@@ -197,8 +198,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeSpeed: 0.5
-  upSpeed: 1
+  moveSpeed: 2
   lifetime: 1
+  arcHeight: 1
   textComponent: {fileID: 6199958042481825710}
 --- !u!1 &8974721988860379812
 GameObject:

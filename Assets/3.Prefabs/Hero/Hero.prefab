@@ -220,7 +220,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 4744834480614971406, guid: 678735adb33738a428f5644d91b6fa7f, type: 3}
   firePoint: {fileID: 6918470478588746551}
   bulletSpeed: 20
-  bulletDamage: 10
+  bulletDamage: 70
   gunTransform: {fileID: 9115941406881483208}
   bulletsPerShot: 5
   spreadAngle: 5

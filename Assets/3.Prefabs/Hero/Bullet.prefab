@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  damage: 10
+  damage: 70
   damageTextPrefab: {fileID: 7104391806530737521, guid: 3d1edd214b256764f9f4293563d0ab74, type: 3}
 --- !u!58 &-8573117133085697226
 CircleCollider2D:

@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour
 {
     private Vector3 direction;
     public float speed = 20f;  // 총알 속도
-    public int damage = 10;    // 총알 데미지
+    public int damage = 70;    // 총알 데미지
     public GameObject damageTextPrefab;
 
     void Start()
@@ -36,7 +36,6 @@ public class Bullet : MonoBehaviour
 
     private void HandleCollision(GameObject hitObject)
     {
-        // 좀비 태그 확인 또는 좀비 컴포넌트 확인
         if (hitObject.CompareTag("Zombie") || hitObject.GetComponent<Zombie>() != null)
         {
             Health health = hitObject.GetComponent<Health>();
@@ -53,16 +52,15 @@ public class Bullet : MonoBehaviour
     {
         if (damageTextPrefab != null)
         {
-            // 프리팹에 DamageText 컴포넌트가 있는지 미리 확인
             DamageText checkComponent = damageTextPrefab.GetComponent<DamageText>();
 
-            // 좀비 위치에서 약간 위에 데미지 텍스트 생성
+            
             Vector3 textPosition = position + new Vector3(0, 0.5f, 0);
 
-            // 데미지 텍스트 생성
+            
             GameObject damageTextObj = Instantiate(damageTextPrefab, textPosition, Quaternion.identity);
 
-            // 데미지 값 설정
+            
             DamageText damageText = damageTextObj.GetComponent<DamageText>();
             if (damageText != null)
             {
