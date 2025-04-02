@@ -228,7 +228,7 @@ MonoBehaviour:
   maxSpeedMultiplier: 1.1
   lineColor: {r: 1, g: 1, b: 1, a: 1}
   lineWidth: 0.05
-  lineDistance: 7
+  lineDistance: 4
   lineFanAngle: 13
 --- !u!70 &-8326884382614250127
 CapsuleCollider2D:
